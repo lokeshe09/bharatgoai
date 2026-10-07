@@ -1,4 +1,4 @@
-const {site,routes,write}=require('./seo-lib.cjs');
+const {routes,write}=require('./seo-lib.cjs');
 const {securityHeaders}=require('./security.cjs');
 function generateHosting() {
   write('vercel.json',JSON.stringify({
