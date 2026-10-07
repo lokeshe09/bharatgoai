@@ -1,3 +1,5 @@
+> Historical design reference. Superseded by the current light-theme informational website; these instructions do not apply to the current implementation.
+
 # BharatGoAI Premium Redesign - Rollout Plan
 ## Phased Deployment Strategy with Staging Verification
 
@@ -73,7 +75,7 @@ Week 3: PRODUCTION ROLLOUT
 - [ ] Replace ALL emoji instances with SVG icons
   - Hero trust badges (3 instances)
   - FAQ categories (11 instances)
-  - Gemini system prompt (4 instances)
+  - retired-provider system prompt (4 instances)
 - [ ] Visual verification: no emojis visible on any page
 
 **Deliverables:**

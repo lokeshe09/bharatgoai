@@ -1,3 +1,5 @@
+> Historical design reference. Superseded by the current light-theme informational website; these instructions do not apply to the current implementation.
+
 # BharatGoAI Premium Redesign - QA & Testing Checklist
 ## Comprehensive Quality Assurance Protocol
 
@@ -586,7 +588,7 @@ npm run preview  # Serve on localhost:4173
 
 **If applicable:**
 - [ ] Analytics tracking works (Google Analytics, etc.)
-- [ ] Gemini AI integration functional
+- [ ] retired-provider AI integration functional
 - [ ] Payment gateways connected
 
 ---

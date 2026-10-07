@@ -1,3 +1,5 @@
+> Historical design reference. Superseded by the current light-theme informational website; these instructions do not apply to the current implementation.
+
 # BharatGoAI Premium Redesign - Migration Checklist
 ## Complete Implementation Guide
 
@@ -123,7 +125,7 @@ categories = [
 ]
 ```
 
-**`/src/lib/gemini.ts` (4 instances in system prompt):**
+**`/src/lib/retired-provider.ts` (4 instances in system prompt):**
 ```typescript
 // BEFORE
 systemInstruction: "🎯 You are BharatGo AI... 🌟 Core values..."

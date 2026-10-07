@@ -1,4 +1,8 @@
-# Netlify configuration for SPA routing
-# Redirect all requests to index.html for client-side routing
-
-/*    /index.html   200
+# Route-specific entries generated during the production build.
+/about     /about/index.html     200
+/products  /products/index.html  200
+/research  /research/index.html  200
+/contact   /contact/index.html   200
+/privacy   /privacy/index.html   200
+/terms     /terms/index.html     200
+/*         /index.html           200

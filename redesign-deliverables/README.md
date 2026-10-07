@@ -1,3 +1,5 @@
+> Historical design reference. Superseded by the current light-theme informational website; these instructions do not apply to the current implementation.
+
 # BharatGoAI Premium Redesign - Complete Deliverables Package
 ## Enterprise-Grade Design System v3.0 - "Graphite Elegance"
 
@@ -76,7 +78,7 @@ grep -r "[\u{1F300}-\u{1F6FF}]" src/
 # Replace emojis in these files:
 # - src/components/Hero.tsx (3 instances)
 # - src/pages/FAQPage.tsx (11 instances)
-# - src/lib/gemini.ts (4 instances)
+# - src/lib/retired-provider.ts (4 instances)
 ```
 
 ### Step 4: Replace Components (Day 3-5)
@@ -294,7 +296,7 @@ See **TAGLINES.md** for all 8 options.
 
 **Issue: Emojis still visible**
 - Run: `grep -r "[\u{1F300}-\u{1F6FF}]" src/`
-- Check: Hero.tsx, FAQPage.tsx, gemini.ts
+- Check: Hero.tsx, FAQPage.tsx, retired-provider.ts
 - Replace with lucide-react icons
 
 **Issue: Chat panel overflows on mobile**
