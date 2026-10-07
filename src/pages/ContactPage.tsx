@@ -18,9 +18,10 @@ export default function ContactPage() {
     const form = event.currentTarget;
     const fields = new FormData(form);
     const name = String(fields.get('name') ?? '').trim();
+    const email = String(fields.get('email') ?? '').trim();
     const message = String(fields.get('message') ?? '').trim();
-    if (!name || !message) { setStatus('Please enter your name and a message before preparing your email.'); return; }
-    const body = `Name: ${name}\nReply email: ${fields.get('email')}\nOrganisation: ${String(fields.get('organisation') ?? '').trim() || 'Not specified'}\nTopic: ${topic}\n\n${message}`;
+    if (!name || !email || message.length < 10) { setStatus('Please enter your name, email address and a message of at least 10 characters.'); return; }
+    const body = `Name: ${name}\nReply email: ${email}\nOrganisation: ${String(fields.get('organisation') ?? '').trim() || 'Not specified'}\nTopic: ${topic}\n\n${message}`;
     setDraft(body);
     setCopied(false);
     setStatus('Your draft is ready below. Open it in your email app, review it, and send it there.');

@@ -1,7 +1,7 @@
 import { ArrowUpRight, Layers3, Cpu, Workflow } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { PageIntro } from '@/components/Sections';
-import { company, flagship, projects } from '@/config/site';
+import { company, flagship, projects, site } from '@/config/site';
 import './products.css';
 
 const approach = [
@@ -69,7 +69,7 @@ export default function ProductsPage() {
             <h2 id="work-cta-title">Interested in collaborating or <span className="serif">building with us?</span></h2>
             <div className="button-row work-cta-buttons">
               <a className="button button-outline" href={company.huggingface} target="_blank" rel="noopener noreferrer">Hugging Face <ArrowUpRight size={18} aria-hidden="true" /></a>
-              <a className="button button-outline" href="https://github.com/lokeshe09" target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight size={18} aria-hidden="true" /></a>
+              <a className="button button-outline" href={site.profiles.github} target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight size={18} aria-hidden="true" /></a>
               <Link to="/contact" className="button button-dark">Contact us <ArrowUpRight size={18} aria-hidden="true" /></Link>
             </div>
           </div>
