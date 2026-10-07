@@ -4,9 +4,9 @@ function generateHosting() {
   write('vercel.json',JSON.stringify({
     $schema:'https://openapi.vercel.sh/vercel.json',
     framework:'vite', buildCommand:'npm run build',outputDirectory:'dist',
+    // No host or HTTPS redirects here: Vercel's Domains settings own them. Duplicating them in
+    // vercel.json fights the dashboard's apex/www choice and causes an asset redirect loop.
     redirects:[
-      {source:'/:path*',has:[{type:'host',value:'www.bharatgoai.com'}],destination:site.origin+'/:path*',statusCode:301},
-      {source:'/:path*',has:[{type:'header',key:'x-forwarded-proto',value:'http'}],destination:site.origin+'/:path*',statusCode:301},
       {source:'/:path+/',destination:'/:path+',statusCode:301},
       {source:'/index.html',destination:'/',statusCode:301},
       ...routes.filter(route=>route!=='/').flatMap(route=>[
