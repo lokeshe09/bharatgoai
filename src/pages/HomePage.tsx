@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import IntelligenceArt from '@/components/IntelligenceArt';
 import { ContactCTA, TextLink } from '@/components/Sections';
 import './home.css';
+import { faqs, site } from '@/config/site';
 
 const stages = [
   { title: 'Define', label: 'START WITH THE RIGHT QUESTION', headline: 'A useful model starts with a real need.', description: 'Who is it for? What should it help them do? Start with the context, the task and the constraints before choosing an approach.', chips: ['People', 'Problem', 'Context'], note: 'A clearly defined problem' },
@@ -12,11 +13,7 @@ const stages = [
   { title: 'Refine', label: 'LET THE LEARNING GUIDE THE WORK', headline: 'Every iteration should have a reason.', description: 'Use what an experiment reveals to refine the approach. Connect model behaviour with the requirements of a practical application.', chips: ['Feedback', 'Iteration', 'Application'], note: 'A more considered next step' },
 ];
 
-const questions = [
-  { question: 'What is BharatGoAI working on?', answer: 'We’re working on large language models, model quantization and applied AI/ML projects, with Indian users and businesses in mind. These areas are currently in development.' },
-  { question: 'Where is BharatGoAI based?', answer: 'BharatGoAI is based in Malkajgiri, Hyderabad, Telangana, India. The company was founded in November 2025 by Lokesh E, Founder & AI/ML Engineer.' },
-  { question: 'Can I discuss an AI/ML project with you?', answer: 'Yes. Email info@bharatgoai.com or use our contact page to prepare an email. Share the problem, the context and what you hope to achieve.' },
-];
+const questions = [faqs[1], faqs[4], faqs[3]];
 
 export default function HomePage() {
   const [direction, setDirection] = useState(0);
@@ -34,9 +31,9 @@ export default function HomePage() {
             <div className="next-announcement"><span />An Indian perspective on AI<ArrowUpRight size={13} aria-hidden="true" /></div>
             <h1>Intelligence,<br />rooted in<br /><span className="next-india">India<span className="next-period">.</span></span></h1>
             <p className="next-hero-lead">Language. Efficiency. Possibility.<br />A thoughtful approach to what AI can become.</p>
-            <p className="next-hero-detail">We’re BharatGoAI — an India-based company working on large language models, quantization and applied AI/ML projects.</p>
+            <p className="next-hero-detail">{site.description}</p>
             <div className="button-row"><Link className="button button-dark next-primary" to="/products">Explore our work <ArrowUpRight size={18} /></Link><Link className="next-secondary" to="/about">The people & the purpose <ArrowRight size={16} /></Link></div>
-            <div className="next-origin"><MapPin size={14} /><span>Hyderabad, India</span><i /><span>Est. November 2025</span></div>
+            <div className="next-origin"><MapPin size={14} /><span>{site.location}</span><i /><span>Est. {site.founded}</span></div>
           </div>
           <IntelligenceArt selected={direction} onSelect={setDirection} />
         </div>
@@ -46,7 +43,7 @@ export default function HomePage() {
       <div className="next-discipline-band" aria-label="Our areas of focus"><div className="container"><span>INDIAN ROOTS. OPEN POSSIBILITIES.</span><div>Large language models<i />Quantization<i />Applied AI & ML</div></div></div>
 
       <section className="container next-focus" id="our-focus">
-        <div className="next-section-heading"><div><p className="eyebrow">01 / THE WORK</p><h2>Deep in the details.<br /><span className="serif">Big on possibility.</span></h2></div><div><p>Three connected directions.<br />One belief: useful AI starts with thoughtful engineering.</p><span className="next-stage-label"><span />Work in development</span></div></div>
+        <div className="next-section-heading"><div><p className="eyebrow">01 / THE WORK</p><h2>Deep in the details.<br /><span className="serif">Big on possibility.</span></h2></div><div><p>Three connected directions.<br />One belief: useful AI starts with thoughtful engineering.</p><span className="next-stage-label"><span />Research & development</span></div></div>
         <div className="next-bento">
           <Link to="/products#language-models" className="next-work-card next-work-language">
             <div className="next-work-top"><span><Layers3 size={18} />LANGUAGE & CONTEXT</span><span className="next-round-arrow"><ArrowUpRight size={20} /></span></div>
@@ -68,7 +65,7 @@ export default function HomePage() {
 
       <section className="next-perspective-shell">
         <div className="container next-perspective">
-          <div className="next-india-art" aria-hidden="true"><div className="next-india-orbit" /><div className="next-india-orbit next-india-orbit-inner" /><span className="next-bharat">भारत</span><span className="next-art-note">A PLACE. A PERSPECTIVE. A POSSIBILITY.</span><span className="next-language-chip chip-one">भाषा</span><span className="next-language-chip chip-two">భాష</span><span className="next-language-chip chip-three">மொழி</span><div className="next-location-chip"><span />Hyderabad, India<ArrowUpRight size={13} /></div></div>
+          <div className="next-india-art" aria-hidden="true"><div className="next-india-orbit" /><div className="next-india-orbit next-india-orbit-inner" /><span className="next-bharat">भारत</span><span className="next-art-note">A PLACE. A PERSPECTIVE. A POSSIBILITY.</span><span className="next-language-chip chip-one">भाषा</span><span className="next-language-chip chip-two">భాష</span><span className="next-language-chip chip-three">மொழி</span><div className="next-location-chip"><span />{site.location}<ArrowUpRight size={13} /></div></div>
           <div className="next-perspective-copy"><p className="eyebrow">02 / THE PERSPECTIVE</p><h2>India isn’t one story.<br /><span className="serif">Its AI shouldn’t<br />be either.</span></h2><p className="body-large">Different languages. Different ambitions.<br />Different ways of seeing the world.</p><p>We believe AI should be shaped by the people and contexts it serves. That perspective guides our interest in language, efficient computation and useful applications.</p><TextLink to="/about">Meet the thinking behind BharatGoAI</TextLink></div>
         </div>
       </section>

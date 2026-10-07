@@ -1,10 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://bharatgoai.com/</loc></url>
-  <url><loc>https://bharatgoai.com/about</loc></url>
-  <url><loc>https://bharatgoai.com/products</loc></url>
-  <url><loc>https://bharatgoai.com/research</loc></url>
-  <url><loc>https://bharatgoai.com/contact</loc></url>
-  <url><loc>https://bharatgoai.com/privacy</loc></url>
-  <url><loc>https://bharatgoai.com/terms</loc></url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>https://bharatgoai.com/sitemap-pages.xml</loc><lastmod>2026-10-07T10:24:45.307Z</lastmod></sitemap></sitemapindex>

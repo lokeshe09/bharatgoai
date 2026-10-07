@@ -1,8 +1,15 @@
-# Route-specific entries generated during the production build.
-/about     /about/index.html     200
-/products  /products/index.html  200
-/research  /research/index.html  200
-/contact   /contact/index.html   200
-/privacy   /privacy/index.html   200
-/terms     /terms/index.html     200
-/*         /index.html           200
+https://www.bharatgoai.com/* https://bharatgoai.com/:splat 301!
+http://bharatgoai.com/* https://bharatgoai.com/:splat 301!
+/about/ /about 301!
+/about /about.html 200
+/products/ /products 301!
+/products /products.html 200
+/research/ /research 301!
+/research /research.html 200
+/contact/ /contact 301!
+/contact /contact.html 200
+/privacy/ /privacy 301!
+/privacy /privacy.html 200
+/terms/ /terms 301!
+/terms /terms.html 200
+/* /404.html 404

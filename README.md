@@ -1,51 +1,71 @@
 # BharatGoAI
 
-Light-theme informational website for BharatGoAI, an India-based company working on LLMs, quantization and AI/ML projects.
+BharatGoAI's informational website, built with React, TypeScript and Vite. The existing visual design uses local SVG/CSS illustrations and system fonts.
 
-## Pages
+## Site configuration
 
-- `/` — company introduction and focus areas
-- `/about` — company, founder and public profiles
-- `/products` — work in development
-- `/research` — research interests and engineering approach
-- `/contact` — business details and an email draft composer
-- `/privacy` — general website privacy notes
-- `/terms` — general website terms
+Verified facts, profiles, project statuses, page metadata and FAQs live in `src/config/site.ts`. Unknown facts are explicitly marked `[PLACEHOLDER]` there. Unknown legal names, profile links, photographs and original publication dates are omitted from public structured data.
 
-## Local setup
+Routes: `/`, `/about`, `/products`, `/research`, `/contact`, `/privacy`, `/terms`.
 
-React 18, TypeScript, Vite and Tailwind CSS. Use npm and the included package-lock.json.
+## Development and production
+
+Use Node.js 22 or newer and the committed npm lockfile.
 
 ```sh
-npm install
+npm ci
 npm run dev
-```
-
-```sh
 npm run build
 npm run preview
 ```
 
-No model API key or backend is required. The contact form prepares an email on the visitor's device; visitors must send it through their own email app. It does not submit messages to a server or pretend to have sent them.
+The production build prerenders the complete React layout and content of every route, emits route-specific metadata and JSON-LD, regenerates crawl files, validates the result, and creates Brotli/gzip variants. Client JavaScript hydrates that HTML and loads pages separately.
 
-## Content and design
+The production build uses SWC in process, avoiding the esbuild subprocess restriction encountered in the local Windows environment. Vite remains the bundler.
 
-Shared company details and page metadata: `src/lib/site.ts`.
-Shared navigation and footer: `src/components/Layout.tsx`.
-Design and responsive styles: `src/index.css`.
-Homepage layout and interactions: `src/pages/HomePage.tsx`, with scoped styles in `src/pages/home.css`. The hero offers three selectable research directions, and the approach section has four selectable stages. Decorative motion can be paused and respects reduced-motion preferences.
-The light theme uses frosted glass surfaces, translucent warm tints and soft shadows, with solid surfaces for higher contrast preferences. Illustrations are local SVG/CSS; fonts use the system sans-serif and Georgia. The company name is plain text, with no logo or branded favicon. No external font or analytics requests are added.
+`npm run preview` uses the supplied static server, including real 404 responses and redirect checks. The ordinary Vite SPA fallback is not used for production validation.
 
-`build/static-pages.ts` emits separate HTML entry files for the seven public routes during a production build, with unique titles, descriptions, canonical URLs and basic readable fallback content. React renders the full layouts when JavaScript loads. This is not full React server-side rendering.
+## Quality commands
 
-The npm lockfile remains the dependency source. The obsolete binary Bun lockfile and old compiled output have been removed; regenerate the build locally.
+These commands are provided for later use; they are not automatically started by editing the code.
 
-## Content boundaries
+```sh
+npm run typecheck
+npm run lint
+npm run test:seo
+npm run build
+npm run validate:seo
+npm run test:lighthouse
+```
 
-Only supplied company facts are included: BharatGoAI, founded November 2025, Malkajgiri, Hyderabad, Telangana, India — 500047, info@bharatgoai.com, and founder Lokesh E. No registration number, certifications, paid plans, performance metrics, testimonials or unconfirmed product capabilities are published. Public profile URLs come from the supplied update brief; they have not been checked online.
+CI runs the same gates. Lighthouse configuration targets mobile scores of at least 95, LCP below 2 seconds and CLS below 0.05. TBT below 150 ms is a lab gate; actual INP below 150 ms needs field measurement. No Lighthouse or Core Web Vitals score is claimed without measurement.
 
-The founder illustration is a typographic monogram, not a photograph. General policy notes cover this informational website and email enquiries. Hosting and email operations were not audited.
+## Generated assets and indexing
 
-## Validation status
+`npm run build` refreshes sitemap, crawler guidance, the feed, web manifests, security contact and static pages. Content modification dates come from the central configuration; sitemap generation timestamps come from the build.
 
-This update was reviewed through source inspection only. Dependencies were not installed, and the app, build, lint and tests were not run, as requested. Hosting, domain configuration, email delivery and off-site profiles were not changed.
+The seven social cards and icon set are committed. To regenerate their artwork after changing page headings:
+
+```sh
+python -m pip install -r requirements-seo.txt
+npm run seo:images
+```
+
+The image generator uses a local system font and makes no network requests. PNG social cards maximize preview compatibility; matching WebP variants are also included. No raster image or downloaded font is needed to render the current page content.
+
+```sh
+npm run indexnow:dry-run
+npm run indexnow:submit
+```
+
+IndexNow submission is explicit and belongs after deployment. It verifies the live key, build manifest and changed URLs before submitting. It is not run automatically by the build.
+
+## Hosting and analytics
+
+`vercel.json` contains redirects, security headers, caching and the seven exact route rewrites. There is no SPA catch-all. A custom `404.html` is generated. `public/_headers` and `public/_redirects` provide alternative static-host settings.
+
+Optional Umami analytics stays disabled until its real configuration is supplied. The script loads only after consent. Visitors can withdraw consent in the footer when analytics is enabled.
+
+The contact form prepares an email draft locally. Visitors send it through their own email application.
+
+See [SEO-IMPLEMENTATION.md](SEO-IMPLEMENTATION.md) for the complete file inventory, remaining facts to supply, verification limits and deployment checklist.

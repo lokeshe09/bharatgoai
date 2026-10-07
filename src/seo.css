@@ -1,0 +1,18 @@
+/* Small additions use the established fonts, colors and page components. */
+.company-faq details { border-bottom: 1px solid var(--line); padding-block: 14px; }
+.company-faq summary { cursor: pointer; min-height: 48px; display: list-item; align-content: center; font-weight: 500; }
+.company-faq details p { padding: 8px 0 18px; max-width: 850px; }
+.faq-links { margin-top: 24px; }
+.content-updated { font-size: 12px; padding-bottom: 24px; }
+.analytics-consent { padding-block: 24px; }
+.analytics-consent p { max-width: 700px; margin-bottom: 16px; }
+.analytics-consent button.text-link { border: 0; background: transparent; color: var(--ink); }
+.site-header nav a, .site-footer a, .text-link, .motion-control, .atlas-controls button, .next-process-steps button, .menu-toggle { min-height: 48px; }
+.site-header nav a, .site-footer a, .text-link { align-content: center; }
+.menu-toggle, .motion-control { min-width: 48px; }
+.home-next .atlas-controls button { min-height: 48px; }
+.atlas-topline, .next-origin, .next-stage-label, .next-question-number { color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) {
+  /* SSR content stays visible at first paint; only decorative motion remains. */
+  .home-next .atlas, .home-next .next-hero-copy { animation: none; }
+}
