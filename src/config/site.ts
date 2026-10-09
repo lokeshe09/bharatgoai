@@ -15,7 +15,7 @@ export const site = {
   origin: 'https://bharatgoai.com',
   language: 'en-IN',
   locale: 'en_IN',
-  email: 'info@bharatgoai.com',
+  email: 'dev@bharatgoai.com',
   founded: 'November 2025',
   foundingDate: '2025-11',
   contentUpdated: '2026-10-07',
@@ -46,7 +46,7 @@ export const pageMeta: Record<string, PageMeta> = {
   '/about': page({ title: 'About BharatGoAI — Lokesh E & India-Focused AI Research', description: 'Meet BharatGoAI and founder Lokesh E, Founder & AI/ML Engineer in Hyderabad, working on India-focused multimodal models, quantization and efficient serving.', heading: 'An Indian perspective. A builder’s mindset.', label: 'About us', type: 'AboutPage', image: '/og/about.png' }),
   '/products': page({ title: 'Our Work — Multimodal LLMs & AI/ML Projects | BharatGoAI', description: 'Explore BharatGoAI’s India-focused multimodal language models, vision-language fine-tuning, model quantization and efficient deployment with vLLM serving.', heading: 'From model to meaningful application.', label: 'Our work', type: 'CollectionPage', image: '/og/products.png' }),
   '/research': page({ title: 'AI Research — Multimodal Models & vLLM | BharatGoAI', description: 'Explore BharatGoAI’s research focus on vision-language adaptation, Indian-context evaluation, model quantization and efficient deployment through vLLM serving.', heading: 'Good AI starts with better questions.', label: 'Research', type: 'CollectionPage', image: '/og/research.png' }),
-  '/contact': page({ title: 'Contact BharatGoAI — AI Projects & Research in India', description: 'Contact BharatGoAI in Malkajgiri, Hyderabad for multimodal AI projects, quantization and research collaboration. Email info@bharatgoai.com to discuss your work.', heading: 'Let’s build something meaningful.', label: 'Contact', type: 'ContactPage', image: '/og/contact.png' }),
+  '/contact': page({ title: 'Contact BharatGoAI — AI Projects & Research in India', description: 'Contact BharatGoAI in Malkajgiri, Hyderabad for multimodal AI projects, quantization and research collaboration. Email dev@bharatgoai.com to discuss your work.', heading: 'Let’s build something meaningful.', label: 'Contact', type: 'ContactPage', image: '/og/contact.png' }),
   '/privacy': page({ title: 'Privacy Policy — Website & Email Enquiries | BharatGoAI', description: 'Read how the BharatGoAI website handles contact enquiries, optional analytics consent and external links, and find our email for privacy-related questions.', heading: 'Privacy, in plain language.', label: 'Privacy', type: 'WebPage', image: '/og/privacy.png' }),
   '/terms': page({ title: 'Terms of Use — Website & Project Information | BharatGoAI', description: 'Read the terms for using BharatGoAI’s website, including project information, external model links, acceptable use and how to contact us with your questions.', heading: 'A few shared ground rules.', label: 'Terms', type: 'WebPage', image: '/og/terms.png' }),
 };
@@ -74,7 +74,7 @@ export const faqs = [
   { question: 'Who is BharatGoAI?', answer: 'BharatGoAI is an India-focused AI company founded in November 2025 in Hyderabad by Lokesh E, Founder & AI/ML Engineer.' },
   { question: 'What does BharatGoAI build?', answer: 'We build and adapt multimodal language models for Indian-context use, including vision-language fine-tuning, model quantization and efficient serving with vLLM.' },
   { question: 'What stage is the work at?', answer: 'Our India-focused multimodal LLM is in development. Handwritten exam OCR is research, the listed Qwen and Gemma quantization projects are released, and vLLM serving work is ongoing. See individual project pages for details.' },
-  { question: 'How can I collaborate with BharatGoAI?', answer: 'Email info@bharatgoai.com to discuss a research question or AI/ML project. You can explore Lokesh E’s models and datasets on Hugging Face and code on GitHub.' },
+  { question: 'How can I collaborate with BharatGoAI?', answer: 'Email dev@bharatgoai.com to discuss a research question or AI/ML project. You can explore Lokesh E’s models and datasets on Hugging Face and code on GitHub.' },
   { question: 'Where is BharatGoAI based?', answer: 'BharatGoAI is based in Malkajgiri, Hyderabad, Telangana, India, postal code 500047.' },
 ];
 // No invented research publications. Add reviewed content and verified dates together.

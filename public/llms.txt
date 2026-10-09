@@ -9,14 +9,14 @@ Founded November 2025. Based in Malkajgiri, Hyderabad, Telangana, India — 5000
 - [About us](https://bharatgoai.com/about): Meet BharatGoAI and founder Lokesh E, Founder & AI/ML Engineer in Hyderabad, working on India-focused multimodal models, quantization and efficient serving.
 - [Our work](https://bharatgoai.com/products): Explore BharatGoAI’s India-focused multimodal language models, vision-language fine-tuning, model quantization and efficient deployment with vLLM serving.
 - [Research](https://bharatgoai.com/research): Explore BharatGoAI’s research focus on vision-language adaptation, Indian-context evaluation, model quantization and efficient deployment through vLLM serving.
-- [Contact](https://bharatgoai.com/contact): Contact BharatGoAI in Malkajgiri, Hyderabad for multimodal AI projects, quantization and research collaboration. Email info@bharatgoai.com to discuss your work.
+- [Contact](https://bharatgoai.com/contact): Contact BharatGoAI in Malkajgiri, Hyderabad for multimodal AI projects, quantization and research collaboration. Email dev@bharatgoai.com to discuss your work.
 - [Privacy](https://bharatgoai.com/privacy): Read how the BharatGoAI website handles contact enquiries, optional analytics consent and external links, and find our email for privacy-related questions.
 - [Terms](https://bharatgoai.com/terms): Read the terms for using BharatGoAI’s website, including project information, external model links, acceptable use and how to contact us with your questions.
 
 ## Profiles and contact
 - [Hugging Face](https://huggingface.co/lokeshe09): models and datasets
 - [GitHub](https://github.com/lokeshe09): code
-- Email: info@bharatgoai.com
+- Email: dev@bharatgoai.com
 
 ## Full text
 - [Expanded website content](https://bharatgoai.com/llms-full.txt)

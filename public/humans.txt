@@ -2,6 +2,6 @@ BharatGoAI
 Founder: Lokesh E
 Role: Founder & AI/ML Engineer
 Location: Malkajgiri, Hyderabad, Telangana, India — 500047
-Contact: info@bharatgoai.com
+Contact: dev@bharatgoai.com
 Founded: November 2025
 Built with React, TypeScript and Vite.
